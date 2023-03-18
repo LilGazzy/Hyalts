@@ -1,308 +1,130 @@
-<style>
-    html
-    {
-        font-family: Arial Black;
-        background-color: #1c1c1c
-        
-        
-    }
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <style>
+    * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 
+header {
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	padding: 20px;
+}
 
-</style>
-<style>
-        
-    .Main-Menu {
-        background-color: #454545;
-        width: 1280px;
-        height: 75px;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-    }
-    
-    .Header-1 {
-        color: white;
-        position: absolute;
-        top: 100px;
-        left: 200px;
-    }
-    
-        
-    .Desc-1 {
-        color: white;
-        position: absolute;
-        top: 150px;
-        left: 200px;
-    }
-    
-        
-    .accounts {
-        background-color: #454545;
-        border-radius: 15px;
-        position: absolute;
-        top: 250px;
-        left: 200px;
-        width: 920px;
-        height: 500px;
-    }
-    
-    .Shop-Header {
-        color: white;
-        position: absolute;
-        top: 10px;
-        left: 405px;
-    }
-    
-    .FA {
-        background-color: #1c1c1c;
-        border-radius: 15px;
-        position: absolute;
-        top: 110px;
-        right: 340px;
-        width: 250px;
-        height: 350px;
-    }
-    
-    .FA-Title {
-        color: white;
-        position: absolute;
-        right: 50px;
-    }
-    
-        
-    .FA-Price {
-        color: white;
-        position: absolute;
-        right: 100px;
-        top: 50px;
-    }
-    
-        
-    .FA-Desc {
-        color: white;
-        position: absolute;
-        right: 10px;
-        top: 83px;
-    }
-    
-    .FA-Skin {
-        position: absolute;
-        left: 90px;
-        top: 130px;
-    }
-    
-        
-    .FA-Buy {
-        background-color: #2486f0;
-        cursor: pointer;
-        color: white;
-        border-radius: 11px;
-        border-width: 0px;
-        font-size: 35;
-        position: absolute;
-        right: 50px;
-        bottom: 10px;
-        transition: 0.3s;
-        
-    }
-    
-    .FA-Buy:hover {opacity: 0.6}
-    
-        
-    .NFA {
-        background-color: #1c1c1c;
-        border-radius: 15px;
-        position: absolute;
-        top: 110px;
-        right: 50px;
-        width: 250px;
-        height: 350px;
-    }
-    
-    .NFA-Title {
-        color: white;
-        position: absolute;
-        right: 50px;
-    }
-    
-        
-    .NFA-Price {
-        color: white;
-        position: absolute;
-        right: 100px;
-        top: 50px;
-    }
-    
-        
-    .NFA-Desc {
-        color: white;
-        position: absolute;
-        right: 10px;
-        top: 83px;
-    }
-    
-    .NFA-Skin {
-        position: absolute;
-        left: 90px;
-        top: 130px;
-    }
-    
-        
-    .NFA-Buy {
-        background-color: #2486f0;
-        cursor: pointer;
-        color: white;
-        border-radius: 11px;
-        border-width: 0px;
-        font-size: 35;
-        position: absolute;
-        right: 50px;
-        bottom: 10px;
-        transition: 0.3s;
-        
-    }
-    
-    .NFA-Buy:hover {opacity: 0.6}
-    
-        
-    .MFA {
-        background-color: #1c1c1c;
-        border-radius: 15px;
-        position: absolute;
-        top: 110px;
-        left: 50px;
-        width: 250px;
-        height: 350px;
-    }
-    
-    .MFA-Title {
-        color: white;
-        position: absolute;
-        right: 50px;
-    }
-    
-        
-    .MFA-Price {
-        color: white;
-        position: absolute;
-        right: 100px;
-        top: 50px;
-    }
-    
-        
-    .MFA-Desc {
-        color: white;
-        position: absolute;
-        right: 10px;
-        top: 83px;
-    }
-    
-    .MFA-Skin {
-        position: absolute;
-        left: 90px;
-        top: 130px;
-    }
-    
-        
-    .MFA-Buy {
-        background-color: #2486f0;
-        cursor: pointer;
-        color: white;
-        border-radius: 11px;
-        border-width: 0px;
-        font-size: 35;
-        position: absolute;
-        right: 50px;
-        bottom: 10px;
-        transition: 0.3s;
-        
-    }
-    
-    .MFA-Buy:hover {opacity: 0.6}
-    
-        
-    .stock {
-        background-color: #454545;
-        border-radius: 15px;
-        position: absolute;
-        top: 780px;
-        left: 200px;
-        width: 920px;
-        height: 100px;
-    }
-    
-    .stock-title {
-        color: white;
-        position: absolute;
-        right: 280px;
-        top: -18px;
-        
-    }
-    
-    .stock-count {
-        color: #2486f0;
-        position: absolute;
-        right: 430px;
-        top: 30px;
-    }
-    
-    .logo-png {
-        position: absolute;
-        right: 550px;
-    }
+nav ul {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 10px;
+}
 
+nav li {
+	margin: 0 10px;
+}
 
-</style>
+nav a {
+	color: #fff;
+	text-decoration: none;
+}
 
-<title>Sky Alts</title>
-<div class="Main-Menu">
+main {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.featured {
+	flex-basis: 60%;
+}
+
+.featured h3 {
+	margin-bottom: 10px;
+}
+
+.alt {
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.alt img {
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+	margin-bottom: 10px;
+}
+
+.alt h4 {
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+.alt p {
+	font-size: 18px;
+}
+
+.categories {
+	flex-basis
+
     
-    <img class="logo-png" src="https://user-images.githubusercontent.com/122753727/213589538-3bf7d89b-a0ef-4e0a-90a4-44b9f93e71f2.png" width="220" height="70">
-
-</div>
-
-<h1 class="Header-1">The Go-To Alt Shop</h1>
-<p class="Desc-1">Sky Alts is the current leading Minecraft Alt shop. With prices starting at $0.39 per alt. Instant delivery. FA</p>
-
-<div class="accounts">
-    <h1 class="Shop-Header">Shop</h1>
     
-    <div class="FA">
-        <h2 class="FA-Title">Full Access</h2>
-        <h3 class="FA-Price">$6.99</h3>
-        <p class="FA-Desc">100% Full Access Account</p>
-        <img class="FA-Skin" src="https://mcprofile.net/static/skin/e760e15ea139e0552b817a353b4136f87bc70eb5b82c61a53a4586c1bc1bcb95/" width="55" height="127" alt="Skin">
-        <form action="/purchase" method="GET">
-            <input type="submit" value="Purchase" class="FA-Buy">
-        
-        </form>
-    </div>
-        
-            
-        <div class="NFA">
-            <h2 class="NFA-Title">NFA Access</h2>
-            <h3 class="NFA-Price">$0.39</h3>
-            <p class="NFA-Desc">Zero Full Access Account</p>
-            <img class="NFA-Skin" src="https://mcprofile.net/static/skin/6e55b3c234460de7a5468286d1eddea37d5fd81c0da50026d23ff0249bf7aec7/" width="55" height="127" alt="Skin">
-            <form action="/purchase" method="GET">
-                <input type="submit" value="Purchase" class="NFA-Buy">
-            </form>
-    </div>
-            
-                    
-            <div class="MFA">
-                <h2 class="MFA-Title">MFA Access</h2>
-                <h3 class="MFA-Price">$2.00</h3>
-                <p class="MFA-Desc">Semi Full Access Account</p>
-                <img class="MFA-Skin" src="https://mcprofile.net/static/skin/e308e16a4bd7f9955ada116e7433e0037ef5e24d49c2d441ab9e18a41dbb681a/" width="55" height="127" alt="Skin">
-                <form action="/purchase" method="GET">
-                    <input type="submit" value="Purchase" class="MFA-Buy">
-                </form>
-    </div>
-</div>
-
-<div class="stock">
-    <h1 class="stock-title">Accounts In Stock:</h1>
-    <h2 class="stock-count">16K</h2>
-
-</div>
+    
+    
+    
+    </style>
+	<title>SkyAlts</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About Us</a></li>
+				<li><a href="#">Shop</a></li>
+				<li><a href="#">Contact Us</a></li>
+			</ul>
+		</nav>
+		<h1>SkyAlts</h1>
+		<h2>Your One-Stop Minecraft Alt Shop</h2>
+	</header>
+	<main>
+		<section class="featured">
+			<h3>Featured Alts</h3>
+			<div class="alt">
+				<img src="alt1.png" alt="Alt 1">
+				<h4>Alt 1</h4>
+				<p>$5.99</p>
+			</div>
+			<div class="alt">
+				<img src="alt2.png" alt="Alt 2">
+				<h4>Alt 2</h4>
+				<p>$7.99</p>
+			</div>
+			<div class="alt">
+				<img src="alt3.png" alt="Alt 3">
+				<h4>Alt 3</h4>
+				<p>$9.99</p>
+			</div>
+		</section>
+		<section class="categories">
+			<h3>Categories</h3>
+			<ul>
+				<li><a href="#">Premium Alts</a></li>
+				<li><a href="#">Semi-Full Access Alts</a></li>
+				<li><a href="#">Non-Full Access Alts</a></li>
+				<li><a href="#">OptiFine Capes</a></li>
+			</ul>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2023 SkyAlts. All rights reserved.</p>
+	</footer>
+</body>
+</html>
